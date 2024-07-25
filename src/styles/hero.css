@@ -1,0 +1,55 @@
+.hero {
+    height: 100vh;
+    padding-inline: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  & > .content {
+    /* Rules for hero content section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    gap: 16px;
+
+    & > .title {
+        font-size: 64px;
+        line-height: 76px;
+        font-weight: 700;
+        color: var(--gray-color);
+
+        & > span {
+            color: var(--primary);
+        }
+    }
+
+    & > .paragraph {
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--soft-gray-color);
+    }
+  }
+}
+
+
+@media screen and (max-width: 668px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap: 16px;
+    }
+
+    .hero .content {
+        align-items: center;
+
+        & > .title {
+            text-align: center;
+        }
+    }
+}

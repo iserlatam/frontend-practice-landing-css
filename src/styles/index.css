@@ -1,0 +1,87 @@
+@import url('./hero.css');
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --text-color: #18191F;
+    --primary: #4CAF4F;
+    --secondary: #F5F7FA;
+    --gray-color: #4D4D4D;
+    --soft-gray-color: #717171
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 100px;
+  padding-block: 24px;
+}
+
+header .logo {
+  display: block;
+  text-align: center;
+}
+
+header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /* NESTED ELEMENTS */
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 48px;
+
+    & > li > a {
+        font-size: 16px;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+  }
+}
+
+header .btn-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.btn {
+    padding-inline: 20px;
+    padding-block: 10px;
+    font-weight: 700;
+}
+
+.btn.md {
+    padding-inline: 32px;
+    padding-block: 16px;
+}
+
+.btn.primary {
+    color: var(--secondary);
+    background: var(--primary);
+}
+
+.btn.secondary {
+    color: var(--primary);
+    background: transparent;
+}
